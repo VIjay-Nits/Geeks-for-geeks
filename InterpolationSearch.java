@@ -20,22 +20,18 @@ public class Solution {
                 System.out.println("1");
             else 
                 System.out.println("-1");
-        
-  
-
   }
     
   public int interpolationSearch(int a[],int K,int low,int hi){
            int pos=low+(((K-a[low])*(hi-low))/(a[hi]-a[low]));
           
-           if(a[pos]==K)return 1;
-           else if(a[pos]>K)return interpolationSearch(a,K,low,pos-1);
-           else if(a[pos]<K)return interpolationSearch(a,K,pos+1,hi);
+           if(a[pos]==K) return 1;
+           else if(a[pos]>K)
+                   return interpolationSearch(a,K,low,pos-1);
+           else if(a[pos]<K)
+                    return interpolationSearch(a,K,pos+1,hi);
            else return -1;
-           
-          
-           
-  
   }
+}
   
  
